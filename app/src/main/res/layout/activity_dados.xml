@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".dados"
-    android:background="@color/black">
+    android:background="@color/black"
+    android:id="@+id/mainLayout">
+
 
     <TextView
         android:id="@+id/txt_tit"
@@ -17,116 +19,85 @@
         android:textSize="80px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <TextView
-        android:id="@+id/txt_nome"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:text="Nome:"
+        android:id="@+id/hardware1_txt"
+        android:layout_width="405dp"
+        android:layout_height="150dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.090" />
+
+
+    <TextView
+        android:id="@+id/cod_hardware1_txt"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_background"
+        android:text="0"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="50px"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.110" />
 
     <TextView
-        android:id="@+id/txt_nomeresp"
-        android:layout_width="315dp"
-        android:layout_height="26dp"
+        android:id="@+id/nome_hardware1_txt"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@drawable/edit_text_background"
+        android:text="0"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="50px"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.087" />
 
     <TextView
-        android:id="@+id/txt_stts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Status:"
+        android:id="@+id/stts_hardware1_txt"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@drawable/edit_text_background"
+        android:text="0"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="50px"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.158" />
 
     <TextView
-        android:id="@+id/txt_sttsresp"
-        android:layout_width="315dp"
-        android:layout_height="26dp"
+        android:id="@+id/desc_hardware1_txt"
+        android:layout_width="390dp"
+        android:layout_height="30dp"
+        android:background="@drawable/edit_text_background"
+        android:text="0"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="50px"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.233" />
 
-    <TextView
-        android:id="@+id/txt_cod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Código:"
-        android:textColor="@color/white"
-        android:textSize="50px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
-
-    <TextView
-        android:id="@+id/txt_codresp"
-        android:layout_width="310dp"
-        android:layout_height="26dp"
-        android:textColor="@color/white"
-        android:textSize="50px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
-
-    <TextView
-        android:id="@+id/txt_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descrição:"
-        android:textColor="@color/white"
-        android:textSize="50px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
-
-    <TextView
-        android:id="@+id/txt_descresp"
-        android:layout_width="380dp"
-        android:layout_height="335dp"
-        android:ems="10"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

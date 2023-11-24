@@ -1,8 +1,10 @@
 package com.example.relatrios;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -10,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,20 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
         cnf.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, dados.class);
-                startActivity(intent);
-            }
-        });
+            public void onClick(View v) {
 
-        cnf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(MainActivity.this);
-                myDB.addBD(nome.getText().toString().trim(),
-                        status.getText().toString().trim(),
-                        desc.getText().toString().trim(),
-                        cod.getText().toString().trim());
+                String nm = edtnome.getText().toString();
+                String st = edtstatus.getText().toString();
+                String dc = edtdesc.getText().toString();
+                String cd = edtcod.getText().toString();
+
+                Intent intent = new Intent(MainActivity.this, dados.class);
+                intent.putExtra("nome_edt", nm);
+                intent.putExtra("status_edt", st);
+                intent.putExtra("descricao_edt", dc);
+                intent.putExtra("codigo_edt", cd);
+
+                startActivity(intent);
             }
         });
     }
